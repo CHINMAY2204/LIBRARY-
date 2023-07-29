@@ -1,0 +1,5 @@
+def add_member(name, email, phone):
+    query = "INSERT INTO members (name, email, phone) VALUES (%s, %s, %s)"
+    values = (name, email, phone)
+    cursor.execute(query, values)
+    db.commit()
