@@ -1,0 +1,12 @@
+def borrow_book(book_id):
+    query_select = "SELECT copies_available FROM books WHERE book_id = %s"
+    cursor.execute(query_select, (book_id,))
+    copies_available = cursor.fetchone()[0]
+
+    if copies_available > 0:
+        query_update = "UPDATE books SET copies_available = %s WHERE book_id = %s"
+        cursor.execute(query_update, (copies_available - 1, book_id))
+        db.commit()
+        return True
+    else:
+        return False
