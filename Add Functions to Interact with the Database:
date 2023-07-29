@@ -1,0 +1,7 @@
+Add Functions to Interact with the Database:
+
+def add_book(title, author, genre, copies_available):
+    query = "INSERT INTO books (title, author, genre, copies_available) VALUES (%s, %s, %s, %s)"
+    values = (title, author, genre, copies_available)
+    cursor.execute(query, values)
+    db.commit()
