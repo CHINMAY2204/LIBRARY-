@@ -1,0 +1,5 @@
+def search_book(search_query):
+    query = "SELECT * FROM books WHERE title LIKE %s OR author LIKE %s"
+    values = (f"%{search_query}%", f"%{search_query}%")
+    cursor.execute(query, values)
+    return cursor.fetchall()
