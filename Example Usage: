@@ -1,0 +1,20 @@
+if __name__ == "__main__":
+    create_tables()
+
+    # Example usage
+    add_book("The Catcher in the Rye", "J.D. Salinger", "Fiction", 5)
+    add_book("To Kill a Mockingbird", "Harper Lee", "Fiction", 3)
+    add_member("John Doe", "john@example.com", "123-456-7890")
+
+    # Search for a book
+    search_result = search_book("Mockingbird")
+    print(search_result)
+
+    # Borrow a book
+    if borrow_book(2):
+        print("Book borrowed successfully!")
+    else:
+        print("Book not available.")
+
+    # Return a book
+    return_book(2)
