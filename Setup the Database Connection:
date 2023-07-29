@@ -1,0 +1,10 @@
+import mysql.connector
+
+# Replace with your MySQL database credentials
+db = mysql.connector.connect(
+    host="localhost",
+    user="your_username",
+    password="your_password",
+    database="library_db"
+)
+cursor = db.cursor()
